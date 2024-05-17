@@ -1,0 +1,18 @@
+{
+  "name": "@ryanwelcher/multi-block-template",
+  "version": "1.0.0",
+  "description": "A template for use with @wordpress/create-block to allow creating a plugin with multiple blocks",
+  "license": "GPL-2.0-or-later",
+  "keywords": [
+    "wordpress",
+    "create block",
+    "gutenberg"
+  ],
+  "author": {
+    "name": "Ryan Welcher",
+    "url": "https://ryanwelcher.com"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
