@@ -51,5 +51,4 @@ function {{slugSnakeCase}}_block_init() {
 				register_block_type($block_folder);
 		};	
 }
-
-add_action( 'init', __NAMESPACE__ . '{{slugSnakeCase}}_block_init' );
+add_action( 'init', __NAMESPACE__ . '\{{slugSnakeCase}}_block_init' );
