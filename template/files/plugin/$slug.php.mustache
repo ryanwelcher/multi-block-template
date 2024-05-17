@@ -44,6 +44,11 @@ if ( ! defined( 'ABSPATH' ) ) {
  * @see https://developer.wordpress.org/reference/functions/register_block_type/
  */
 function {{slugSnakeCase}}_block_init() {
-	register_block_type_from_metadata( __DIR__ . '/build' );
+	if (file_exists(__DIR__ . '/build/')) {
+		$block_json_files = glob(__DIR__ . '/build/*/block.json');
+		foreach ($block_json_files as $filename) {
+				$block_folder = dirname($filename);
+				register_block_type($block_folder);
+		};	
 }
 add_action( 'init', __NAMESPACE__ . '\{{slugSnakeCase}}_block_init' );
